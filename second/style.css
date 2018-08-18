@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: url(pic1.jpg);
+  font-family: sans-serif;
+}
+
+.title{
+  text-align: center;
+  padding: 20px, 0, 0 50px;
+}
+
+.title h2{
+  font-family: sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+.container{
+  width: 50%;
+  height: 400px;
+  background: url(pic2.JPEG);
+  margin-top: 100px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.left{
+  width: 50%;
+  height: 400px;
+  background: url(pic3.JPG);
+  float: left;
+}
+
+.right{
+  width: 50%;
+  height: 400px;
+  box-sizing: border-box;
+  float: right;
+  background: #fff;
+
+}
+
+.form-box{
+  width: 100%;
+  padding: 80px 40px;
+  height: 400px;
+}
+
+.form-box h2{
+  font-weight: bold;
+  color: #a6af13;
+}
+.form-box input{
+  margin-bottom: 20px;
+}
+
+.form-box input[type="text"], input[type="password"]
+{
+  border: none;
+  border-bottom: 2px solid #a6af13;
+  height: 40px;
+  color: black;
+}
+
+.form-box input[type="submit"]
+{
+  border: none;
+  height: 40px;
+  background: #262626;
+  color: #fff;
+  width: 40%;
+}
+.form-box input[type="submit"]:hover
+{
+  background: #a6af13;
+}
+
+.form-box a
+{
+  color: #262626;
+
+}
+.form-box a:hover
+{
+  color: #a6af13;
+
+}

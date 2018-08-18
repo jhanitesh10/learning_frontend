@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>first html practice</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <script src="./payment.js"></script> -->
+    <!-- <script src="https://js.instamojo.com/v1/checkout.js"></script> -->
+
+    <style>
+  </style>
+  </head>
+<body class="bg-white">
+<div class="container-fluid py-3">
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+      <div id="pay-invoice" class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h3 class="text-center"> Order </h3>
+          </div>
+          <hr class="bg-info">
+          <h6>Product detail</h6>
+
+          <hr class="bg-info">
+          <h6 class="text-center ">Hey Nitesh, you are about to buy oneplu ONe</h6>
+          
+
+          <div class="row">
+            
+            <section id="left" class="col-6">
+                <img src="pic1.jpg"  alt="product" class="img-fluid">
+            <h4 class="text-center"> <strong>Price:</strong>$200 </h4>
+
+            </section>
+
+            <section id="right" class="col-6">
+              <div class="row">
+                <div class="form-group  col-sm-10">
+                  <label for="cc-exp" class="control-label mb-1">Brand</label>
+                  <!-- <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required placeholder="MM / YY" autocomplete="cc-exp"> -->
+                  <select class="selectpicker form-control" data-live-search="true" required disabled>
+                    <option data-tokens="Maharashtra">iphone</option>
+                    <option data-tokens="B">google</option>
+                    <option data-tokens="C">oneplusone</option>
+                  </select>
+                  <span class="invalid-feedback">Enter the expiration date</span>
+                </div>
+
+                <div class="form-group col-sm-10">
+                  <label for="cc-exp" class="control-label mb-1">State</label>
+                  <!-- <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required placeholder="MM / YY" autocomplete="cc-exp"> -->
+                  <select class="selectpicker form-control" data-live-search="true" required>
+                    <option data-tokens="Maharashtra">Maharashtra</option>
+                    <option data-tokens="B">B</option>
+                    <option data-tokens="C">C</option>
+                  </select>
+                  <span class="invalid-feedback">Enter the expiration date</span>
+                  
+                </div>
+                
+
+
+
+              </div>
+            </section>
+
+          </div>
+
+
+<hr class="bg-info">
+
+          <h6>Address Detail</h6>
+          <hr class="bg-info">
+
+          <form action="/echo" method="post" novalidate="novalidate" class="needs-validation">
+            <!-- <div class="form-group text-center">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <i class="text-muted fa fa-cc-visa fa-2x"></i>
+                </li>
+                <li class="list-inline-item">
+                  <i class="fa fa-cc-mastercard fa-2x"></i>
+                </li>
+                <li class="list-inline-item">
+                  <i class="fa fa-cc-amex fa-2x"></i>
+                </li>
+                <li class="list-inline-item">
+                  <i class="fa fa-cc-discover fa-2x"></i>
+                </li>
+              </ul>
+            </div> -->
+            <div class="form-group">
+              <label for="cc-payment" class="control-label mb-1">Email</label>
+              <input id="cc-payment" name="cc-payment" type="email" class="form-control" aria-required="true" aria-invalid="false" required>
+              <span class="invalid-feedback">Enter the correct email address</span>
+            </div>
+
+            <div class="form-group">
+              <label for="cc-payment" class="control-label mb-1">Contact</label>
+              <input id="cc-payment" name="cc-payment" type="contact" class="form-control" aria-required="true" aria-invalid="false" required>
+              <span class="invalid-feedback">Enter  the valid 10 digit number</span>
+            </div>
+
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea2">address</label>
+            <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" required></textarea>
+            <span class="invalid-feedback">Enter  the valid 10 digit number</span>
+          </div>
+
+
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="cc-exp" class="control-label mb-1">State</label>
+                  <!-- <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required placeholder="MM / YY" autocomplete="cc-exp"> -->
+                  <select class="selectpicker form-control" data-live-search="true" required>
+                    <option data-tokens="Maharashtra">Maharashtra</option>
+                    <option data-tokens="B">B</option>
+                    <option data-tokens="C">C</option>
+                  </select>
+
+                  <span class="invalid-feedback">Enter the expiration date</span>
+                </div>
+              </div>
+
+              
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="cc-exp" class="control-label mb-1">State</label>
+                  <!-- <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required placeholder="MM / YY" autocomplete="cc-exp"> -->
+                  <select class="selectpicker form-control" data-live-search="true" required>
+                    <option data-tokens="Maharashtra">Maharashtra</option>
+                    <option data-tokens="B">B</option>
+                    <option data-tokens="C">C</option>
+                  </select>
+
+                  <span class="invalid-feedback">Enter the expiration date</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="x_zip" class="control-label mb-1">Postal code</label>
+              <input id="x_zip" name="x_zip" type="text" class="form-control" value="" data-val="true" data-val-required="Please enter the ZIP/Postal code"
+                autocomplete="postal-code">
+              <span class="help-block" data-valmsg-for="x_zip" data-valmsg-replace="true"></span>
+            </div>
+
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea2">Descriptio about product</label>
+              <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>
+            </div>
+
+            
+
+            <div>
+
+              <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
+                <i class="fa fa-lock fa-lg"></i>&nbsp;
+                <span id="payment-button-amount">Pay $100.00</span>
+                <span id="payment-button-sending" style="display:none;">Sending…</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+
+
+    $("#payment-button").click(function (e) {
+
+      // Fetch form to apply Bootstrap validation
+      var form = $(this).parents('form');
+
+      if (form[0].checkValidity() === false) {
+        e.preventDefault();
+        e.stopPropagation();
+      } else {
+        // Perform ajax submit here
+        // onButtonClick();
+        form.submit();
+      }
+
+      form.addClass('was-validated');
+    });
+  </script>
+
+  <script src="https://js.instamojo.com/v1/checkout.js"></script>
+  <script>
+    /* Start client-defined Callback Handler Functions */
+    function onOpenHandler() {
+      alert('Payments Modal is Opened');
+    }
+
+    function onCloseHandler() {
+      alert('Payments Modal is Closed');
+    }
+
+    function onPaymentSuccessHandler(response) {
+      alert('Payment Success');
+      console.log('Payment Success Response', response);
+    }
+
+    function onPaymentFailureHandler(response) {
+      alert('Payment Failure');
+      console.log('Payment Failure Response', response);
+    }
+    /* End client-defined Callback Handler Functions */
+
+    /* Configuring Handlers */
+    Instamojo.configure({
+      handlers: {
+        onOpen: onOpenHandler,
+        onClose: onCloseHandler,
+        onSuccess: onPaymentSuccessHandler,
+        onFailure: onPaymentFailureHandler
+      }
+    });
+
+    function onButtonClick() {
+      console.log("hey");
+      Instamojo.open('https://www.instamojo.com/@jhanitesh10/offer/payment?ref=onb_tasks');
+    }
+  </script>
+  
+</body>
+</html>
