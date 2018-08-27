@@ -76,7 +76,7 @@ class App extends Component {
 
     return (
 
-      <div style={bodyStyle} className="container-flued bg-info">
+      <div style={bodyStyle} className="container-fluid bg-info">
       <h2 className="text-center">Github user finder</h2>
 
         <SearchBox fetchUser={this.fetchUser.bind(this)} />
