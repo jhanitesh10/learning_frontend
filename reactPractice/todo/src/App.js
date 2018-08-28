@@ -6,14 +6,19 @@ import Card from './component/card.js'
 
 let todoArray = [
   {
-    id: '',
     todoData: 'My first todo',
-    todoPriority: 'Low'
+    todoPriority: 'Low',
+    theme : 'info',
   },
   {
-    id: '',
     todoData: 'My second todo',
-    todoPriority: 'Hight'
+    todoPriority: 'medium',
+    theme : 'warning'
+  },
+  {
+    todoData: 'My third todo',
+    todoPriority: 'Hight',
+    theme: 'danger'
   }
 ]
 
@@ -27,26 +32,56 @@ class App extends Component {
   }
 
   fetchTodo(data){
-    todoArray.push(data);
-    this.setState({
-      todoArray
-    });
+
+    this.setState({ todoArray: [...this.state.todoArray, data] }) //simple value
+
+
   }
 
   removeData(index){
-    console.log("#####################");
-    this.setState({
-      todoArray: this.state.todoArray.filter(function (e, i) {
+
+    this.setState((state) => ({
+
+      todoArray: state.todoArray.filter(function (e, i) {
         return i !== index;
       })
-    });
+
+    }));
+
+
+  }
+
+  completeTask(index){
+
+
+    this.setState((state) => ({
+
+      todoArray: state.todoArray.filter(function (e, i) {
+        if (i === index) {
+          console.log(e, "***************");
+          e.theme = 'success';
+        }
+        return e;
+      })
+
+    }));
+
   }
 
   render() {
+
+    let size = {
+      width: '100%',
+      height: '100%',
+      color: 'white',
+      position: 'absolute',
+      background: '#132A39'
+    }
+
     return (
-      <div className="App">
+      <div style = {size} className="App" >
       <Search fetchTodo={this.fetchTodo.bind(this)}/>
-      <Card data={this.state.todoArray} removeData = {this.removeData.bind(this) } />
+      <Card data={this.state.todoArray} removeData = {this.removeData.bind(this)} completeTask = {this.completeTask.bind(this)}  />
       </div>
     );
   }
