@@ -73,9 +73,9 @@ class Search extends React.Component{
                                 </div>
 
 
-                                <div class="input-group-append">
+                                <div className="input-group-append">
                                 
-                                    <button class="btn btn-outline-secondary" type="submit">ADD</button>
+                                    <button className="btn btn-outline-secondary" type="submit">ADD</button>
                                 </div>
                             </div> 
                         </form>

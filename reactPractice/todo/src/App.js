@@ -79,7 +79,7 @@ class App extends Component {
     }
 
     return (
-      <div style = {size} className="App" >
+      <div style = {size} className="container-fluid bg-red" >
       <Search fetchTodo={this.fetchTodo.bind(this)}/>
       <Card data={this.state.todoArray} removeData = {this.removeData.bind(this)} completeTask = {this.completeTask.bind(this)}  />
       </div>
